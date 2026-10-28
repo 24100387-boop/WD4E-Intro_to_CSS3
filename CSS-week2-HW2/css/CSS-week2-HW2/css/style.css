@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #172b4d;
+  background-color: #f5f9fc;
+  margin: 0;
+}
+
+.skip-link {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #12355b;
+  font-weight: bold;
+}
+
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+header {
+  background-color: #dbeafe;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: inline-block;
+  width: 80%;
+  background-color: #12355b;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 16px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Quy tac li cua bai 1 da duoc vo hieu hoa:
+li {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  vertical-align: top;
+}
+*/
+
+nav a {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 4px;
+  text-decoration: underline;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #12355b;
+  background-color: #dbeafe;
+  border-radius: 6px;
+}
+
+nav img {
+  display: block;
+  width: 10%;
+  height: auto;
+  margin: 15px auto 0;
+  border-radius: 8px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  color: #12355b;
+  text-align: center;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 25px;
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+main:focus {
+  outline: 3px solid #12355b;
+  outline-offset: -3px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+main a,
+footer a {
+  color: #0a4d80;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 24px;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #dbeafe;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex img {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #dbeafe;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #e2e8f0;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  /* Quy tac li tren dien thoai cua bai 1 da duoc vo hieu hoa:
+  li {
+    display: block;
+    width: 100%;
+  }
+  */
+
+  h1 {
+    font-size: 28px;
+  }
+
+  main {
+    margin: 10px;
+    padding: 15px;
+  }
+}
