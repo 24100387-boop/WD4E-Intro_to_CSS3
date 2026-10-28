@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Interactive Photo Gallery</h1>
+
+    <p class="instructions">
+      Hover over a small image to see it in the large preview.
+      You can also use Tab to select an image.
+    </p>
+
+    <div id="image" aria-live="polite" aria-atomic="true">Hover over an image below to display here.</div>
+
+    <div class="thumbnails">
+      <figure>
+        <img
+          class="preview"
+          src="../CSS-week1-HW1/images/BaconGallupPark.jpg"
+          alt="A brown dog sitting beside a statue in a sunny park."
+          tabindex="0"
+          onmouseover="upDate(this)"
+          onmouseout="unDo()"
+          onfocus="upDate(this)"
+          onblur="unDo()">
+
+        <figcaption>A day at the park</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          class="preview"
+          src="../CSS-week1-HW1/images/lake_view.JPG"
+          alt="A peaceful lake viewed through leafy branches."
+          tabindex="0"
+          onmouseover="upDate(this)"
+          onmouseout="unDo()"
+          onfocus="upDate(this)"
+          onblur="unDo()">
+
+        <figcaption>A quiet lake</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          class="preview"
+          src="../CSS-week1-HW1/images/munising.jpg"
+          alt="A waterfall flowing over rocks in a green forest."
+          tabindex="0"
+          onmouseover="upDate(this)"
+          onmouseout="unDo()"
+          onfocus="upDate(this)"
+          onblur="unDo()">
+
+        <figcaption>A forest waterfall</figcaption>
+      </figure>
+    </div>
+  </main>
+</body>
+</html>
