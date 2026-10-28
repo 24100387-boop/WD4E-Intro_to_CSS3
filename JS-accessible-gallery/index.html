@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Accessible Interactive Photo Gallery</h1>
+
+    <p class="instructions">
+      Move your pointer over a photo or press Tab to select it.
+      Use Shift + Tab to move backward.
+      Moving away from a photo restores the original preview.
+    </p>
+
+    <noscript>
+      <p>
+        This interactive preview requires JavaScript.
+        The photos and their descriptions are still available below.
+      </p>
+    </noscript>
+
+    <div id="image" aria-live="polite" aria-atomic="true">Hover over an image below to display here.</div>
+
+    <section aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Choose a photo</h2>
+
+      <div class="thumbnails">
+        <figure>
+          <img
+            class="preview"
+            src="../CSS-week1-HW1/images/BaconGallupPark.jpg"
+            alt="A brown dog sitting beside a statue in a sunny park."
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+          <figcaption>A day at the park</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            class="preview"
+            src="../CSS-week1-HW1/images/lake_view.JPG"
+            alt="A lake seen through leafy branches beside a tree trunk."
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+          <figcaption>A quiet lake</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            class="preview"
+            src="../CSS-week1-HW1/images/munising.jpg"
+            alt="A small waterfall flowing over rocks in a green forest."
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+          <figcaption>A forest waterfall</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            class="preview"
+            src="../CSS-week1-HW1/images/huron_river_cascades.JPG"
+            alt="Two people in a kayak approaching small river rapids."
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+          <figcaption>Kayaking on the river</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            class="preview"
+            src="../CSS-week1-HW1/images/mist_over_huron_river.JPG"
+            alt="Morning mist rising above a calm river."
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+          <figcaption>Morning mist</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            class="preview"
+            src="../CSS-week1-HW1/images/reflected_tree.JPG"
+            alt="Trees and the shoreline reflected in the water of a lake."
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()">
+          <figcaption>Reflections on the lake</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Practice project: mouse events, keyboard focus
+      and JavaScript DOM updates.
+    </p>
+  </footer>
+</body>
+</html>
