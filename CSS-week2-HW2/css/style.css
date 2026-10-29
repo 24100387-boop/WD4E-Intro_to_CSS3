@@ -3,20 +3,17 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: #172b4d;
-  background-color: #f5f9fc;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #203c2f;
+  background-color: #f7f8f2;
 }
 
-.skip-link {
-  display: inline-block;
-  margin: 12px;
-  padding: 10px 16px;
-  background-color: #ffffff;
-  color: #12355b;
-  font-weight: bold;
+a {
+  color: #1c6246;
+  text-underline-offset: 4px;
 }
 
 a:focus-visible {
@@ -24,151 +21,303 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-header {
-  background-color: #dbeafe;
-  padding: 20px;
-  text-align: center;
+.skip-link {
+  display: inline-block;
+  margin: 8px 10%;
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: bold;
 }
 
+header {
+  padding: 18px 0 44px;
+  background-color: #edf2e6;
+  text-align: center;
+  border-bottom: 1px solid #d4dfcf;
+}
+
+/* Navigation: required display and width */
 nav {
   display: inline-block;
   width: 80%;
-  background-color: #12355b;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #d4dfcf;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 8px 28px #2545300a;
+}
+
+/* Only the image inside nav receives this width */
+nav img {
+  display: inline-block;
+  width: 10%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  vertical-align: middle;
+  border: 2px solid #d4dfcf;
+  border-radius: 50%;
 }
 
 nav ul {
-  display: flex;
+  display: inline-flex;
+  width: 83%;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 16px;
-  list-style-type: none;
-  margin: 0;
+  gap: 8px;
+  margin: 0 0 0 4%;
   padding: 0;
+  list-style: none;
+  vertical-align: middle;
 }
 
-/* Quy tac li cua bai 1 da duoc vo hieu hoa:
+/* Old Homework One list-item styles are commented out:
 li {
   display: inline-block;
   width: 30%;
-  text-align: center;
-  vertical-align: top;
 }
 */
 
 nav a {
   display: inline-block;
-  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #203c2f;
+  font-size: 15px;
   font-weight: bold;
-  padding: 10px 4px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
+nav a[aria-current="page"],
 nav a:hover,
 nav a:focus {
-  color: #12355b;
-  background-color: #dbeafe;
-  border-radius: 6px;
+  color: #163d29;
+  background-color: #e5eedb;
 }
 
-nav img {
-  display: block;
-  width: 10%;
-  height: auto;
-  margin: 15px auto 0;
-  border-radius: 8px;
+.eyebrow,
+.section-label {
+  color: #4d6557;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.eyebrow {
+  margin: 32px 0 12px;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
 }
 
 h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
-  color: #12355b;
-  text-align: center;
+  margin: 0 auto 16px;
+  font-size: clamp(32px, 5vw, 64px);
+}
+
+.header-intro {
+  width: min(650px, 80%);
+  margin: 0 auto;
+  color: #536252;
+  font-size: 18px;
 }
 
 main {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 25px;
-  font-size: 18px;
-  background-color: #ffffff;
-  border-radius: 12px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px 0 48px;
 }
 
 main:focus {
-  outline: 3px solid #12355b;
-  outline-offset: -3px;
+  outline: 3px solid #1c6246;
+  outline-offset: 5px;
 }
 
-p {
-  line-height: 1.7;
+.home-story {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  padding: 34px;
+  background-color: #ffffff;
+  border: 1px solid #d4dfcf;
+  border-radius: 24px;
 }
 
-main a,
-footer a {
-  color: #0a4d80;
-  text-decoration: underline;
+.story-copy {
+  flex: 1 1 300px;
+  min-width: 0;
 }
 
+.story-copy h2 {
+  margin: 14px 0 20px;
+  font-size: 40px;
+}
+
+.story-copy p {
+  margin: 14px 0;
+}
+
+.hero-photo {
+  display: block;
+  width: min(420px, 100%);
+  height: 400px;
+  object-fit: cover;
+  padding: 8px;
+  background-color: #f7f8f2;
+  border: 1px solid #d4dfcf;
+  border-radius: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 16px;
+  color: #ffffff;
+  background-color: #1c6246;
+  border: 1px solid #1c6246;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button.secondary {
+  color: #203c2f;
+  background-color: #edf2e6;
+  border-color: #ccd9c5;
+}
+
+.button:hover {
+  color: #163d29;
+  background-color: #d9e7cc;
+}
+
+.collection-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.collection-heading h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.collection-heading span {
+  color: #536252;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Grid: all required layout properties are explicit */
 .grid {
   display: grid;
   grid-template-columns: 40% 40%;
   justify-content: space-evenly;
   align-items: center;
-  row-gap: 24px;
+  row-gap: 32px;
 }
 
+/* Only images inside .grid are set to width: 100% */
 .grid img {
   display: block;
   width: 100%;
   height: auto;
-  border: 2px solid #dbeafe;
-  border-radius: 10px;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #d4dfcf;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px #2545300d;
 }
 
+/* Flex: all required layout properties are explicit */
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .flex img {
   display: block;
-  width: 200px;
+  width: 220px;
   max-width: 100%;
   height: auto;
-  border: 2px solid #dbeafe;
-  border-radius: 10px;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #d4dfcf;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px #2545300d;
 }
 
 footer {
-  background-color: #e2e8f0;
-  padding: 20px;
-  text-align: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 0 32px;
+  border-top: 1px solid #d4dfcf;
+  color: #536252;
+  font-size: 14px;
 }
 
 footer p {
   margin: 0;
 }
 
+.back-top {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
 @media (max-width: 600px) {
-  /* Quy tac li tren dien thoai cua bai 1 da duoc vo hieu hoa:
+  nav a {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .header-intro {
+    font-size: 16px;
+  }
+
+  .home-story {
+    padding: 20px;
+  }
+
+  .story-copy h2 {
+    font-size: 30px;
+  }
+
+  .hero-photo {
+    height: 280px;
+  }
+
+  .collection-heading h2 {
+    font-size: 27px;
+  }
+
+  /* Old Homework One mobile list-item styles remain disabled:
   li {
     display: block;
     width: 100%;
   }
   */
-
-  h1 {
-    font-size: 28px;
-  }
-
-  main {
-    margin: 10px;
-    padding: 15px;
-  }
 }
